@@ -1,6 +1,6 @@
 # 包
 
-dub是经典包管理工具。它需要一个简单的JSON文档package.json来描述项目，并且需要一定的目录结构。
+dub是经典包管理工具。它使用一个简单的JSON文档package.json来描述项目，并且需要一定的目录结构。
 
 + 源代码位于源或src子目录中
 + main函数在app.d或<package name> .d中
