@@ -31,14 +31,19 @@ dmd编译器确实生成了很好的代码，但它与更流行的编译器后�
 
 # 基准测试
 
-在优化某个热点时，基准测试是必不可少的。D自带了std.datetime.benchmark和comparingBenchmark，这可用于简单的比较。
+在优化某个热点时，基准测试是必不可少的。D自带了std.datetime.stopwatch.benchmark和comparingBenchmark，这可用于简单的基准测试。
+
+    import std.conv;
+    import std.datetime.stopwatch;
 
     int  a ; 
-    void  f0 （） {} 
-    void  f1 （） { auto  b  =  a ;} 
-    void  f2 （） { auto  b  =  to ！（string ）（a ）;} 
-    auto  r  =  benchmark ！（f0 ， f1 ， f2 ）（10_000 ） ; 
-    writefln （“Milliseconds to call fun [0] n次：％s” ， r [ 0 ] .msecs ）;
+    void  f0(){} 
+    void  f1(){ auto  b  =  a ;} 
+    void  f2(){ auto b  =  to!(string)(a);}
+    auto  r  =  benchmark!(f0,f1,f2)(10_000); 
+    writefln("Milliseconds to call fun [0] 10_000次：%s", r[0]);
+    writefln("Milliseconds to call fun [1] 10_000次：%s", r[1]);
+    writefln("Milliseconds to call fun [2] 10_000次：%s", r[2]);
 
 
     
