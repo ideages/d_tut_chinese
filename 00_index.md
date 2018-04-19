@@ -17,13 +17,13 @@
 
 # 目录
 
-### 世界你好
+### [世界你好](https://github.com/ideages/d_tut_chinese/blob/master/01_helloworld.md)
     方便
 
-### 哲学
+### [哲学](https://github.com/ideages/d_tut_chinese/blob/master/02_Philosophy.md)
     批判
 
-### 其他语言
+### [其他语言](https://github.com/ideages/d_tut_chinese/blob/master/03_OhterLanguages.md)
     对于C程序员
     对于Java程序员
     对于C ++程序员
